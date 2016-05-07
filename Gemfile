@@ -30,6 +30,12 @@ gem 'tomdoc'
 gem 'resque'
 gem 'resque-web', require: 'resque_web'
 
+# Email validation
+gem 'email_validator'
+
+# HAML Templates
+gem 'haml-rails', '~> 0.9.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,6 +50,8 @@ group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
   gem 'minitest-rails'
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
 end
 
 group :development do

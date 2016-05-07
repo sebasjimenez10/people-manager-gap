@@ -11,7 +11,11 @@ require "minitest/rails"
 # require "minitest/pride"
 
 class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods
+
+  ActiveRecord::Migration.check_pending!
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  # fixtures :all
   # Add more helper methods to be used by all tests here...
+  extend MiniTest::Spec::DSL
 end
