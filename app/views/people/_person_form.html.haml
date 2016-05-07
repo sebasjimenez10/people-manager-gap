@@ -1,0 +1,59 @@
+%br
+%br
+= form_for @person do |f|
+  .form-group.controls
+    .row
+      .col-md-3.text-right
+        .people-label First Name
+      .col-md-9.text-left
+        = f.text_field :first_name, class: 'form-control'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Last Name
+      .col-md-9.text-left
+        = f.text_field :last_name, class: 'form-control'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Email
+      .col-md-9.text-left
+        = f.text_field :email, class: 'form-control'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Job
+      .col-md-9.text-left
+        = f.text_field :job, class: 'form-control'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Bio
+      .col-md-9.text-left
+        = f.text_area :bio, class: 'form-control', size: '20x6'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Gender
+      .col-md-9.text-left
+        = f.select :gender, ['m', 'f'], class: 'form-control input-lg'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Birthdate
+      .col-md-9.text-left
+        = f.text_field :birthdate, class: 'form-control', 'data-provide': 'datepicker'
+    %br
+    .row
+      .col-md-3.text-right
+        .people-label Picture (URL)
+      .col-md-9.text-left
+        = f.text_field :picture, class: 'form-control'
+    %br
+    .row
+      .col-md-3
+      .col-md-6
+        = f.submit 'Add New Person', class: 'btn btn-primary btn-block'
+      .col-md-3
+        = link_to 'Cancel', :back, class: 'btn btn-default btn-block'
+

@@ -1,43 +1,42 @@
 %br
-%div
-  .text-left
-    .row
-      .col-md-12
-        - if @person.picture.present?
-          %img{src: "#{@person.picture}", alt: "#{@person.first_name} #{@person.last_name}", height: '200' }
-        %h1
-          = "#{@person.first_name} #{@person.last_name}"
-        .well
-          %h4.text-center
-            %i= "\"#{@person.bio}\""
+.text-left
+  .row
+    .col-md-12
+      - if @person.picture.present?
+        %img{src: "#{@person.picture}", alt: "#{@person.first_name} #{@person.last_name}", height: '200' }
+      %h1
+        = "#{@person.first_name} #{@person.last_name}"
+      .well
+        %h4.text-center
+          %i= "\"#{@person.bio}\""
 
-    .row
-      .col-md-12
-        .well.bigger-text
-          .row
-            .col-md-2.text-right
-              %b Email
-            .col-md-10.text-left= @person.email
-          .row
-            .col-md-2.text-right
-              %b Gender
-            .col-md-10.text-left= @person.gender.present? ? (@person.gender == 'm' ? 'Male' : 'Female') : 'Not specified'
-          .row
-            .col-md-2.text-right
-              %b Birthdate
-            .col-md-10.text-left= @person.birthdate
-          .row
-            .col-md-2.text-right
-              %b Job
-            .col-md-10.text-left= @person.job
-    .row
-      .col-md-12
-        .well.text-right
-          .row
-            .col-md-4
-              = link_to 'Cancel', people_path, class: 'btn btn-default btn-block'
-            .col-md-4
-              = link_to 'Edit', edit_person_path(@person.id), class: 'btn btn-primary btn-block'
-            .col-md-4
-              = link_to 'Delete', person_path(@person.id), class: 'btn btn-danger btn-block', method: :delete, data: { confirm: "Are you sure you want to delete #{@person.first_name} #{@person.last_name}?" }
-      
+  .row
+    .col-md-12
+      .well.bigger-text
+        .row
+          .col-md-2.text-right
+            %b Email
+          .col-md-10.text-left= @person.email
+        .row
+          .col-md-2.text-right
+            %b Gender
+          .col-md-10.text-left= @person.gender.present? ? (@person.gender == 'm' ? 'Male' : 'Female') : 'Not specified'
+        .row
+          .col-md-2.text-right
+            %b Birthdate
+          .col-md-10.text-left= @person.birthdate
+        .row
+          .col-md-2.text-right
+            %b Job
+          .col-md-10.text-left= @person.job
+  .row
+    .col-md-12
+      .well.text-right
+        .row
+          .col-md-4
+            = link_to 'Cancel', people_path, class: 'btn btn-default btn-block'
+          .col-md-4
+            = link_to 'Edit', edit_person_path(@person.id), class: 'btn btn-primary btn-block'
+          .col-md-4
+            = link_to 'Delete', person_path(@person.id), class: 'btn btn-danger btn-block', method: :delete, data: { confirm: "Are you sure you want to delete #{@person.first_name} #{@person.last_name}?" }
+    
