@@ -1,0 +1,17 @@
+
+.main{align: 'center'}
+  .jumbotron
+    %h1 Welcome to the People Manager
+
+    %p
+      Developed by
+      %a{href: 'https://github.com/sebasjimenez10'}@sebasjimenez10
+
+    %br
+    %br
+    %br
+    .row
+      .col-md-6.text-right
+        = link_to 'Click here to open the People List', people_path, class: 'btn btn-primary btn-lg'
+      .col-md-6.text-left
+        = link_to 'Or click here to add new people', new_person_path, class: 'btn btn-success btn-lg'

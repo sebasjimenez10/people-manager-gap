@@ -26,6 +26,11 @@ class Person < ActiveRecord::Base
 
   validate :birthdate_check
 
+  def age
+    return Date.today.year - birthdate.year if Date.today.month > birthdate.month
+    Date.today.year - birthdate.year - 1
+  end
+
   private 
 
   def birthdate_check
