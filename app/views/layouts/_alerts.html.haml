@@ -1,5 +1,20 @@
-.alert.alert-warning.alert-dismissible{role: 'alert'}
-  %button.close{'data-dismiss': 'alert', 'aria-label': 'Close'}
-    %span{'aria-hidden': 'true'} &times;
-  %strong Warning!
-  = flash[:notice]
+- if flash[:notice]
+  %br
+  .alert.alert-warning.alert-dismissible{role: 'alert'}
+    %button.close{'data-dismiss': 'alert', 'aria-label': 'Close'}
+      %span{'aria-hidden': 'true'} &times;
+    %strong Heads up!
+    %br
+    - flash[:notice].each do |msg|
+      %ul
+        %li= msg
+- if flash[:error]
+  %br
+  .alert.alert-danger.alert-dismissible{role: 'alert'}
+    %button.close{'data-dismiss': 'alert', 'aria-label': 'Close'}
+      %span{'aria-hidden': 'true'} &times;
+    %strong Heads up!
+    %br
+    - flash[:error].each do |msg|
+      %ul
+        %li= msg

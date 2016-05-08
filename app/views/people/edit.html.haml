@@ -1,0 +1,7 @@
+%br
+%div 
+  .text-center
+    %h1
+      Edit
+      = "#{@person.first_name} #{@person.last_name}"
+  = render 'person_form', locals: {button_message: 'Update', back: person_path(@person.id)}

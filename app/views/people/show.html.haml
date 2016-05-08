@@ -31,12 +31,12 @@
           .col-md-10.text-left= @person.job
   .row
     .col-md-12
-      .well.text-right
+      .text-right
         .row
-          .col-md-4
-            = link_to 'Cancel', people_path, class: 'btn btn-default btn-block'
           .col-md-4
             = link_to 'Edit', edit_person_path(@person.id), class: 'btn btn-primary btn-block'
           .col-md-4
             = link_to 'Delete', person_path(@person.id), class: 'btn btn-danger btn-block', method: :delete, data: { confirm: "Are you sure you want to delete #{@person.first_name} #{@person.last_name}?" }
+          .col-md-4
+            = link_to 'Cancel', people_path, class: 'btn btn-default btn-block'
     

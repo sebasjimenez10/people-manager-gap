@@ -49,11 +49,14 @@
         .people-label Picture (URL)
       .col-md-9.text-left
         = f.text_field :picture, class: 'form-control'
+        - if @person.picture.present?
+          %br
+          %img{src: "#{@person.picture}", alt: "#{@person.first_name} #{@person.last_name}", height: '200' }
     %br
     .row
       .col-md-3
       .col-md-6
-        = f.submit 'Add New Person', class: 'btn btn-primary btn-block'
+        = f.submit locals[:button_message], class: 'btn btn-primary btn-block'
       .col-md-3
-        = link_to 'Cancel', :back, class: 'btn btn-default btn-block'
+        = link_to 'Cancel', locals[:back], class: 'btn btn-default btn-block'
 

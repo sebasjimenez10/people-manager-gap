@@ -2,4 +2,4 @@
 %div 
   .text-center
     %h1 New Person Form
-  = render 'person_form'
+  = render 'person_form', locals: {button_message: 'Add New Person', back: people_path}

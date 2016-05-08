@@ -6,7 +6,7 @@
       Here you will be able to find a list of the people that's currently stored in our database.
       Use the
       %code Add Person
-      button to add more people
+      button to add more people.
     = link_to 'Add Person', new_person_path, class: 'btn btn-success pull-right'
 
   %br
@@ -23,7 +23,10 @@
           %tr
             %td= link_to "#{person.first_name} #{person.last_name}", person_path(person.id)
             %td= person.email
-            %td= person.age
+            %td= "#{pluralize(person.age, 'yr', 'yrs')}"
             %td= link_to 'Delete', person_path(person.id), class: 'btn btn-danger', method: :delete, data: { confirm: "Are you sure you want to delete #{person.first_name} #{person.last_name}?" }
   - else
-    %h4.text-center There aren't any people created yet
+    %br
+    %br
+    .well
+      %h4.text-center There aren't records created yet

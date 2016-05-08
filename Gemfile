@@ -52,7 +52,9 @@ gem 'bootstrap-datepicker-rails'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
   gem 'byebug'
   gem 'factory_girl_rails'
   gem 'minitest-rails'
