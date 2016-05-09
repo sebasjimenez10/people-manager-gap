@@ -1,11 +1,9 @@
-== README
-
 # People Manager
 ## Manage people the easy way
 
 Aspects to be covered in this README:
 
-* Ruby version
+* Ruby / Rails version
 * System dependencies
 * Configuration
 * Database creation
@@ -15,9 +13,10 @@ Aspects to be covered in this README:
 * Deployment instructions
 
 
-### Ruby Version
+### Ruby / Rails Version
 
-Exact Version Used: `ruby 2.2.4p230 (2015-12-16 revision 53155) [x86_64-darwin15]`
+Ruby Version: `ruby 2.2.4p230 (2015-12-16 revision 53155) [x86_64-darwin15]`
+Rails Version: `Rails 4.2.6`
 
 ### System Dependencies
 
@@ -27,6 +26,8 @@ The application dependencies are as follows:
 * Mailcatcher 0.6.1
 * Foreman 0.78.0 (For running the app through the Procfile)
 * MySQL server 5.7.11
+
+Note: To install these dependencies you can use a package manager like Homebrew to get the job done.
 
 ### Configuration
 
@@ -50,16 +51,10 @@ The application will only be using a job queue to process emails. This is done u
 
 ### Deployment instructions
 
-To deploy the application locally you only need to do the following after installing all the dependencies.
+To deploy the application locally you only need to do the following *after installing all the dependencies*.
 
-1. Clone this repo
+1. Clone this repo - `git clone https://github.com/sebasjimenez10/people-manager-gap.git`
 2. Run `bundle install` or simply `bundle`
 3. Follow the database creation and initialization commands
 4. Run `mailcatcher` and open a browser on localhost:1080 to see the emails console
 5. Finally run `foreman start -p 3000` to start the application
-
-- Mailcatcher for testing emails on localhost
-- MySQL server up and running
-- Ruby 2.2.4
-- Rails 4.2.6 or higher
-- Redis must be installed and running on default port

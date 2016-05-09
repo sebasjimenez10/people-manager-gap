@@ -23,7 +23,7 @@ FactoryGirl.define do
     job ''
     bio 'Tester'
     gender 'm'
-    birthdate '2016-05-07'
+    birthdate Date.strptime('05/07/1990', "%m/%d/%Y")
     picture ''
 
     factory :person_no_firstname do

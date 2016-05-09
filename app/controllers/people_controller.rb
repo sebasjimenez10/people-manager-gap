@@ -18,8 +18,7 @@ class PeopleController < ApplicationController
   end
 
   def create
-    @person.save if @person.valid?
-    if @person.persisted?
+    if @person.save
       redirect_to person_path(@person.id)
     else
       flash[:error] = @person.errors.full_messages
